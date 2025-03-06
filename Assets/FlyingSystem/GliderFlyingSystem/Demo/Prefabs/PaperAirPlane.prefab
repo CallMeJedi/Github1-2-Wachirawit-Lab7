@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8981419032303994391}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -30,7 +31,6 @@ Transform:
   m_Children:
   - {fileID: 9210942817014217396}
   m_Father: {fileID: 9210942816392119671}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9210942816350148390
 GameObject:
@@ -55,6 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210942816350148390}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -62,7 +63,6 @@ Transform:
   m_Children:
   - {fileID: 9210942816355432670}
   m_Father: {fileID: 9210942816392119671}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9210942816355432657
 GameObject:
@@ -89,13 +89,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210942816355432657}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.4, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9210942816350148391}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &9210942816355432668
 Camera:
@@ -111,9 +111,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -158,8 +166,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9210942816392119671}
   - component: {fileID: 9210942816392119668}
-  - component: {fileID: 9210942816392119667}
-  - component: {fileID: 9210942816392119666}
   m_Layer: 0
   m_Name: PaperAirPlane
   m_TagString: Untagged
@@ -174,6 +180,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210942816392119670}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -182,7 +189,6 @@ Transform:
   - {fileID: 9210942816350148391}
   - {fileID: 5631537342294072391}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &9210942816392119668
 Rigidbody:
@@ -191,114 +197,26 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210942816392119670}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &9210942816392119667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210942816392119670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be47757e4a2ef2241971f398ca8c8850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  springArmTransform: {fileID: 9210942816350148391}
-  characterCamera: {fileID: 9210942816355432668}
-  rootRigidbody: {fileID: 9210942816392119668}
-  activated: 0
-  autoTakeOff: 0
-  autoTakeOffSpeed: 10
-  cameraSpeed: 300
-  mobileInputControl: 0
-  mobileCameraSpeed: 300
---- !u!114 &9210942816392119666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210942816392119670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 902e73f05a84769419201d3384966bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gliderRigidbody: {fileID: 9210942816392119668}
-  rootTransform: {fileID: 9210942816392119671}
-  rollRootTransform: {fileID: 5631537342294072391}
-  meshRootTransform: {fileID: 9210942817014217396}
-  airDrag: 9.75
-  turningSpeed: 30
-  meshYawTurningSpeed: 45
-  meshYawTurningSmoothingFactor: 2
-  maximumMeshYawAngle: 10
-  meshPitchTurningSpeed: 60
-  meshPitchTurningSmoothingFactor: 4
-  maximumMeshRollAngle: 30
-  meshRollTurningSpeed: 30
-  meshRollTurningSmoothingFactor: 2
-  lookUpWhenEnteringAirflow: 1
-  lookUpAngle: 15
-  canDive: 1
-  maximumDivingSpeed: 500
-  divingStartAngle: 30
-  decelerationAfterDiving: 2
-  g: 9.8
-  calculateCarryingWeight: 1
-  currentCarryingWeight: 0
-  maximumCarryingWeight: 100
-  speedCarryingWeightRatioAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -0.0153846005
-      outSlope: -0.0153846005
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.975
-      value: 0.985
-      inSlope: -0.059999943
-      outSlope: -0.059999943
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -39.40004
-      outSlope: -39.40004
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enabledFlyingLogic: 1
-  inAir: 0
-  inAirflow: 0
-  flyingDirection: {x: 0, y: 0, z: 0}
-  originalFlyingSpeed: 0
-  flyingSpeed: 0
-  flyingVelocity: {x: 0, y: 0, z: 0}
-  diving: 0
-  weightPercentage: 0
 --- !u!1 &9210942817014217399
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +240,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210942817014217399}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -329,13 +248,13 @@ Transform:
   m_Children:
   - {fileID: 8672084387415389326}
   m_Father: {fileID: 5631537342294072391}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9210942817049219941
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 9210942817014217396}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a1c9450143c9d744299891952f506a43, type: 3}
@@ -387,6 +306,12 @@ PrefabInstance:
       value: PaperAirPlane
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a1c9450143c9d744299891952f506a43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 956819075995160635}
   m_SourcePrefab: {fileID: 100100000, guid: a1c9450143c9d744299891952f506a43, type: 3}
 --- !u!1 &8291899188378775092 stripped
 GameObject:
@@ -401,9 +326,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8291899188378775092}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.0034000024, y: 0.004000002, z: 0.0010000012}
   m_Center: {x: 0.00000023841858, y: 0.0020000006, z: 0.00049999956}
 --- !u!4 &8672084387415389326 stripped
